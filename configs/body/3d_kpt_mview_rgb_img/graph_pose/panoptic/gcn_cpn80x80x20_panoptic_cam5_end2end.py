@@ -118,6 +118,7 @@ model = dict(
         refine_cfg=dict(type='CenterRefinementModule',
                         project_layer=dict(feature_map_size=heatmap_size),
                         center_gcn=dict(type='EdgeConvLayers',
+                                        node_edge_merge='add',
                                         edge_channels=None,
                                         edge_out_channels=None,
                                         node_channels=512+num_joints,

@@ -55,6 +55,7 @@ class EdgeConv(MessagePassing):
         # x_j has shape [E, in_channels]
         # edge_feature has shape [E, e_channels]
         if edge_feature is None:
+            assert self.node_edge_merge == 'add'
             tmp = torch.cat([x_i, x_j - x_i], dim=1)
         else:
             if self.node_edge_merge == 'cat':
@@ -72,6 +73,7 @@ class EdgeConv(MessagePassing):
         x_j, x_i = x[src], x[tar]
 
         if edge_feature is None:
+            assert self.node_edge_merge == 'add'
             tmp = x_j - x_i
         else:
             if self.node_edge_merge == 'cat':
