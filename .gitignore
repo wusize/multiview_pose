@@ -135,3 +135,4 @@ docs_zh-CN/modelzoo.md
 *.pth
 
 *.DS_Store
+checkpoints/

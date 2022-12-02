@@ -114,7 +114,7 @@ class MultiViewMatchModule(nn.Module):
         edge_scores = graph['edge_scores'][graph['edge_valid'][:, 0] > 0]
         edge_labels = graph['edge_labels'][graph['edge_valid'][:, 0] > 0]
         if (graph['edge_valid'][:, 0] > 0).sum() >= 1:
-            _, preds = self.match_gcn(graph['node_features'], edge_scores, edge_indices)
+            _, preds = self.match_gcn(graph['node_features'], edge_indices, edge_scores)
             preds = preds.sigmoid()
             return dict(loss_match=self.get_loss(preds, edge_labels))
 
@@ -240,7 +240,7 @@ class MultiViewMatchModule(nn.Module):
         input_edge_scores = torch.cat([edge_scores_1to2[edge_valid],
                                        edge_scores_2to1[edge_valid]], dim=0)
         edge_preds = torch.zeros_like(edge_scores_1to2)
-        _, preds = self.match_gcn(node_features, input_edge_scores[:, None], input_edge_indices)
+        _, preds = self.match_gcn(node_features, input_edge_indices, input_edge_scores[:, None])
         preds = preds.sigmoid()
         edge_preds[edge_valid] = preds.view(2, -1).mean(0)
 

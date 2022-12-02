@@ -163,7 +163,7 @@ class EdgeConvLayers(nn.Module):
                                nn.ReLU(),
                                nn.Linear(mid_channels, node_out_channels))
 
-    def forward(self, node_features, edge_indices, edge_features):
+    def forward(self, node_features, edge_indices, edge_features=None):
         """
 
         Args:
