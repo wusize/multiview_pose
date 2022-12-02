@@ -66,13 +66,13 @@ multiview_pose
 
 ### Pre-trained 2D model
 Download the pre-trained 2D bottom-up pose estimator from [model]() and put it under checkpoints
-### Training and testing
 ```
 multiview_pose
 ├── checkpoints 
     ├── resnet_50_deconv.pth.tar
 ```
 
+### Training and testing
 For training and testing, use the exactly same commands as 
 [MMPose](https://github.com/open-mmlab/mmpose/blob/master/docs/en/get_started.md#train-a-model).
 For example,
