@@ -36,13 +36,9 @@ We implement our GCN modules using [PyTorch Geometric](https://pytorch-geometric
 ```bash
 conda install pyg -c pyg   # for PyTorch >= 1.8.0
 ```
-If having problem installing PyTorch Geometric with the above command. Try build it from source following the 
+If having problem installing PyTorch Geometric with the above command, try build it from source following the 
 [official tutorial](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html).
 
-
-## License
-
-This project is released under the [Apache 2.0 license](LICENSE).
 
 ## Usage
 
