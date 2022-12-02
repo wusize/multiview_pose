@@ -125,6 +125,8 @@ class CenterRefinementModule(nn.Module):
         node_features, edge_indices = self.build_graph_for_samples(multiview_features)  # PxVxC, PxEx2
         bounding = torch.cat(bounding).view(-1)
         num_samples, num_views, _ = node_features.shape
+        node_features = node_features.view(num_samples * num_views, -1)
+        edge_indices = edge_indices.view(-1, 2).T
         node_features, _ = self.center_gcn(node_features, edge_indices)
         node_features = node_features.view(num_samples, num_views, -1)
         candidate_features, _ = node_features.max(1)
