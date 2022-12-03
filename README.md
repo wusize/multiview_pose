@@ -21,8 +21,8 @@ based on [MMPose](https://github.com/open-mmlab/mmpose). Codes will be integrate
 
  | Refine Pose | mAP| mAR | MPJPE | Config | Download |
  | :---: | :---: | :---: | :---: | :---: | :---: |
- | - | 97.25 | 98.24 | 17.18 |[config](configs/body/3d_kpt_mview_rgb_img/graph_pose/panoptic/gcn_cpn80x80x20_panoptic_cam5_end2end_test_without_refinement.py) | [model]();  [log]() |
- | + | 98.65 | 98.80 | 15.68 |[config](configs/body/3d_kpt_mview_rgb_img/graph_pose/panoptic/gcn_cpn80x80x20_panoptic_cam5_end2end.py) | [model]();  [log]() |
+ | - | 97.25 | 98.24 | 17.18 |[config](configs/body/3d_kpt_mview_rgb_img/graph_pose/panoptic/gcn_cpn80x80x20_panoptic_cam5_end2end_test_without_refinement.py) | [model](https://connecthkuhk-my.sharepoint.com/personal/js20_connect_hku_hk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fjs20%5Fconnect%5Fhku%5Fhk%2FDocuments%2Fmultiview%5Fpose%2Fbest%5FmAP%5Fepoch%5F9%2Epth&parent=%2Fpersonal%2Fjs20%5Fconnect%5Fhku%5Fhk%2FDocuments%2Fmultiview%5Fpose&ga=1);  [log](https://connecthkuhk-my.sharepoint.com/:u:/g/personal/js20_connect_hku_hk/ETwew6qgVY1AgqwmsC-ZmFYB2eoQyJycVA9NpD2MXuQNIA?e=SB7iyi) |
+ | + | 98.65 | 98.80 | 15.68 |[config](configs/body/3d_kpt_mview_rgb_img/graph_pose/panoptic/gcn_cpn80x80x20_panoptic_cam5_end2end.py) | [model](https://connecthkuhk-my.sharepoint.com/personal/js20_connect_hku_hk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fjs20%5Fconnect%5Fhku%5Fhk%2FDocuments%2Fmultiview%5Fpose%2Fbest%5FmAP%5Fepoch%5F9%2Epth&parent=%2Fpersonal%2Fjs20%5Fconnect%5Fhku%5Fhk%2FDocuments%2Fmultiview%5Fpose&ga=1);  [log](https://connecthkuhk-my.sharepoint.com/:u:/g/personal/js20_connect_hku_hk/ETwew6qgVY1AgqwmsC-ZmFYB2eoQyJycVA9NpD2MXuQNIA?e=SB7iyi) |
 
 
 ## Installation
@@ -73,7 +73,7 @@ multiview_pose
 ```
 
 ### Pre-trained 2D model
-Download the pre-trained 2D bottom-up pose estimator from [model]() and put it under checkpoints
+Download the pre-trained 2D bottom-up pose estimator this [link](https://connecthkuhk-my.sharepoint.com/:u:/g/personal/js20_connect_hku_hk/EcNwzSz4jy5Kl7tu4S3LR_EBQIAAhs96EVCuwIBi4PNm9w?e=UaGexg) and put it under checkpoints
 ```
 multiview_pose
 ├── checkpoints 
