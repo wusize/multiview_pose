@@ -21,15 +21,15 @@ based on [MMPose](https://github.com/open-mmlab/mmpose). Codes will be integrate
 
  | Refine Pose | mAP| mAR | MPJPE | Config | Download |
  | :---: | :---: | :---: | :---: | :---: | :---: |
- | - | |  | |[config](configs/body/3d_kpt_mview_rgb_img/graph_pose/panoptic/gcn_cpn80x80x20_panoptic_cam5_end2end.py) | [model]();  [log]() |
- | + | |  | |[config](configs/body/3d_kpt_mview_rgb_img/graph_pose/panoptic/gcn_cpn80x80x20_panoptic_cam5_end2end.py) | [model]();  [log]() |
+ | - | 97.25 | 98.24 | 17.18 |[config](configs/body/3d_kpt_mview_rgb_img/graph_pose/panoptic/gcn_cpn80x80x20_panoptic_cam5_end2end_test_without_refinement.py) | [model]();  [log]() |
+ | + | 98.65 | 98.80 | 15.68 |[config](configs/body/3d_kpt_mview_rgb_img/graph_pose/panoptic/gcn_cpn80x80x20_panoptic_cam5_end2end.py) | [model]();  [log]() |
 
 
 ## Installation
 
 ### MMPose
 Following this [installation guidance](https://github.com/open-mmlab/mmpose/blob/master/docs/en/install.md) to 
-build the latest from source.
+build the latest version of MMPose from source.
 
 ```bash
 git clone https://github.com/open-mmlab/mmpose.git
@@ -83,15 +83,17 @@ multiview_pose
 ### Training and testing
 For training and testing, use the exactly same commands as 
 [MMPose](https://github.com/open-mmlab/mmpose/blob/master/docs/en/get_started.md#train-a-model).
-For example,
+For example, you can train the model with 8 GPUs by using 
 
 ```bash
 bash tools/dist_train.sh configs/body/3d_kpt_mview_rgb_img/graph_pose/panoptic/gcn_cpn80x80x20_panoptic_cam5_end2end.py 8
 ```
-and 
+To test the model with 8 GPUs, use the following
 ```bash
 bash tools/dist_test.sh configs/body/3d_kpt_mview_rgb_img/graph_pose/panoptic/gcn_cpn80x80x20_panoptic_cam5_end2end.py \
- path/to/checkpoint 8 --eval mpjpe
+path/to/checkpoint 8 --eval mpjpe mAP
+bash tools/dist_test.sh configs/body/3d_kpt_mview_rgb_img/graph_pose/panoptic/gcn_cpn80x80x20_panoptic_cam5_end2end_test_without_refinement.py \
+path/to/checkpoint 8 --eval mpjpe mAP   # test without pose refinement
 ```
 ## Citation
 

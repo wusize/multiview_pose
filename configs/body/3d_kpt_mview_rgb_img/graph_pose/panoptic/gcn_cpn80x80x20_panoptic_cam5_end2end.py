@@ -145,7 +145,7 @@ model = dict(
         pose_net=dict(type='V2VNet', input_channels=15, output_channels=15),
         pose_head=dict(type='CuboidPoseHead', beta=100.0)),
     pose_refiner=dict(type='PoseRegressionModule',
-                      pose_noise=10.0,
+                      pose_noise=18.0,
                       pose_topology=dataset_info,
                       num_joints=num_joints,
                       num_cameras=num_cameras,
