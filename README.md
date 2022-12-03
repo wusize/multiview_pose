@@ -1,8 +1,8 @@
 # Graph-Based 3D Multi-Person Pose Estimation Using Multi-View Images (ICCV'2021)
 
-\[[📜 Paper](https://openaccess.thecvf.com/content/ICCV2021/papers/Wu_Graph-Based_3D_Multi-Person_Pose_Estimation_Using_Multi-View_Images_ICCV_2021_paper.pdf))\]
+\[[📜 Paper](https://openaccess.thecvf.com/content/ICCV2021/papers/Wu_Graph-Based_3D_Multi-Person_Pose_Estimation_Using_Multi-View_Images_ICCV_2021_paper.pdf)\]
 \[[📰 Blog (商汤学术)](https://mp.weixin.qq.com/s/N-CQoefmPfSoafzzqGF77A)\]
-\[[📹 Video](https://connecthkuhk-my.sharepoint.com/:v:/g/personal/js20_connect_hku_hk/EUOmA9eGBANNhyRD7W_39WAB0OvOpcLvaQg8EJjWpKxJwA?e=0rc5Nb)\]
+\[[📹 Presentation](https://connecthkuhk-my.sharepoint.com/:v:/g/personal/js20_connect_hku_hk/EUOmA9eGBANNhyRD7W_39WAB0OvOpcLvaQg8EJjWpKxJwA?e=0rc5Nb)\]
 \[[📺 Demo (YouTube)](https://youtu.be/45c9_4neVp8)\]
 
 ## Introduction
@@ -10,7 +10,11 @@
 This is the official release of our paper
 [**Graph-Based 3D Multi-Person Pose Estimation Using Multi-View Images**](
 https://openaccess.thecvf.com/content/ICCV2021/papers/Wu_Graph-Based_3D_Multi-Person_Pose_Estimation_Using_Multi-View_Images_ICCV_2021_paper.pdf) 
-based on [MMPose](https://github.com/open-mmlab/mmpose). Codes will be integrated into MMPose in the future.
+based on [MMPose](https://github.com/open-mmlab/mmpose). 
+
+Thanks to MMPose, the repo produces slightly better results (compared to those reported in the ICCV'21 paper).  
+
+Codes will be integrated into MMPose soon.
 
 ## TODO
 - [x] Training/testing codes release.
@@ -21,10 +25,11 @@ based on [MMPose](https://github.com/open-mmlab/mmpose). Codes will be integrate
 
 ### Multiview 3D Pose Estimation on [CMU Panoptic](http://domedb.perception.cs.cmu.edu/)
 
- | Refine Pose | mAP| mAR | MPJPE | Config | Download |
- | :---: | :---: | :---: | :---: | :---: | :---: |
- | - | 97.25 | 98.24 | 17.18 |[config](configs/body/3d_kpt_mview_rgb_img/graph_pose/panoptic/gcn_cpn80x80x20_panoptic_cam5_end2end_test_without_refinement.py) | [model](https://connecthkuhk-my.sharepoint.com/:u:/g/personal/js20_connect_hku_hk/EUzgB7BmI9VEqSyPH9eW7mwBdc7xj74CrvFIJdwfo2ZcmA?e=8WSbqd);  [log](https://connecthkuhk-my.sharepoint.com/:u:/g/personal/js20_connect_hku_hk/ETwew6qgVY1AgqwmsC-ZmFYB2eoQyJycVA9NpD2MXuQNIA?e=7YsiFS) |
- | + | 98.65 | 98.80 | 15.68 |[config](configs/body/3d_kpt_mview_rgb_img/graph_pose/panoptic/gcn_cpn80x80x20_panoptic_cam5_end2end.py) | [model](https://connecthkuhk-my.sharepoint.com/:u:/g/personal/js20_connect_hku_hk/EUzgB7BmI9VEqSyPH9eW7mwBdc7xj74CrvFIJdwfo2ZcmA?e=8WSbqd);  [log](https://connecthkuhk-my.sharepoint.com/:u:/g/personal/js20_connect_hku_hk/ETwew6qgVY1AgqwmsC-ZmFYB2eoQyJycVA9NpD2MXuQNIA?e=7YsiFS) |
+ || Refine Pose | mAP| mAR | MPJPE (mm) | Config | Download |
+ | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+ |Paper  | + | 98.10 | 98.70 | 15.84 | - | - |
+ |This Repo| - | 97.25 | 98.24 | 17.18 |[config](configs/body/3d_kpt_mview_rgb_img/graph_pose/panoptic/gcn_cpn80x80x20_panoptic_cam5_end2end_test_without_refinement.py) | [model](https://connecthkuhk-my.sharepoint.com/:u:/g/personal/js20_connect_hku_hk/EUzgB7BmI9VEqSyPH9eW7mwBdc7xj74CrvFIJdwfo2ZcmA?e=8WSbqd);  [log](https://connecthkuhk-my.sharepoint.com/:u:/g/personal/js20_connect_hku_hk/ETwew6qgVY1AgqwmsC-ZmFYB2eoQyJycVA9NpD2MXuQNIA?e=7YsiFS) |
+|This Repo | + | 98.65 | 98.80 | 15.68 |[config](configs/body/3d_kpt_mview_rgb_img/graph_pose/panoptic/gcn_cpn80x80x20_panoptic_cam5_end2end.py) | [model](https://connecthkuhk-my.sharepoint.com/:u:/g/personal/js20_connect_hku_hk/EUzgB7BmI9VEqSyPH9eW7mwBdc7xj74CrvFIJdwfo2ZcmA?e=8WSbqd);  [log](https://connecthkuhk-my.sharepoint.com/:u:/g/personal/js20_connect_hku_hk/ETwew6qgVY1AgqwmsC-ZmFYB2eoQyJycVA9NpD2MXuQNIA?e=7YsiFS) |
 
 
 ## Installation
