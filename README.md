@@ -13,18 +13,11 @@ https://openaccess.thecvf.com/content/ICCV2021/papers/Wu_Graph-Based_3D_Multi-Pe
 > Size Wu, Sheng Jin, Wentao Liu, Lei Bai, Chen Qian, Dong Liu, and Wanli Ouyang           
 > *ICCV 2021 ([arXiv 2109.05885](https://arxiv.org/abs/2109.05885))*
 
-Thanks to [MMPose](https://github.com/open-mmlab/mmpose), the repo produces slightly better results (compared to those reported in our ICCV'21 [paper](https://arxiv.org/abs/2109.05885)), please see [Results](https://github.com/wusize/multiview_pose#results) below. Codes will be integrated into MMPose soon.
+Thanks to [MMPose](https://github.com/open-mmlab/mmpose), this repo produces slightly better results (compared to those reported in our ICCV'21 [paper](https://arxiv.org/abs/2109.05885)), please see [Results](https://github.com/wusize/multiview_pose#results) below. Codes will be integrated into MMPose soon.
 
 ## Abstract
 
-This paper studies the task of estimating the 3D human
-poses of multiple persons from multiple calibrated camera
-views. Following the top-down paradigm, we decompose
-the task into two stages, i.e. person localization and pose estimation. Both stages are processed in coarse-to-fine manners. And we propose three task-specific graph neural networks for effective message passing. For 3D person localization, we first use Multi-view Matching Graph Module (MMG) to learn the cross-view association and recover
-coarse human proposals. The Center Refinement Graph
-Module (CRG) further refines the results via flexible pointbased prediction. For 3D pose estimation, the Pose Regression Graph Module (PRG) learns both the multi-view geometry and structural relations between human joints. Our
-approach achieves state-of-the-art performance on CMU
-Panoptic and Shelf datasets with significantly lower computation complexity.
+This paper studies the task of estimating the 3D human poses of multiple persons from multiple calibrated camera views. Following the top-down paradigm, we decompose the task into two stages, i.e. person localization and pose estimation. Both stages are processed in coarse-to-fine manners. And we propose three task-specific graph neural networks for effective message passing. For 3D person localization, we first use Multi-view Matching Graph Module (MMG) to learn the cross-view association and recover coarse human proposals. The Center Refinement Graph Module (CRG) further refines the results via flexible pointbased prediction. For 3D pose estimation, the Pose Regression Graph Module (PRG) learns both the multi-view geometry and structural relations between human joints. Our approach achieves state-of-the-art performance on CMU Panoptic and Shelf datasets with significantly lower computation complexity.
 
 ![Intro](https://user-images.githubusercontent.com/11788150/205444212-333ccc6a-abd5-48d0-a9dc-83dda75501cc.PNG)
 
@@ -39,7 +32,7 @@ Panoptic and Shelf datasets with significantly lower computation complexity.
 
 ### Multiview 3D Pose Estimation on [CMU Panoptic](http://domedb.perception.cs.cmu.edu/)
 
- || Refine Pose | mAP| mAR | MPJPE (mm) | Config | Download |
+ || Refine Pose | mAP $\uparrow$| mAR $\uparrow$| MPJPE (mm) $\downarrow$| Config | Download |
  | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
  |Paper  | + | 98.10 | 98.70 | 15.84 | - | - |
  |This Repo| - | 97.25 | 98.24 | 17.18 |[config](configs/body/3d_kpt_mview_rgb_img/graph_pose/panoptic/gcn_cpn80x80x20_panoptic_cam5_end2end_test_without_refinement.py) | [model](https://connecthkuhk-my.sharepoint.com/:u:/g/personal/js20_connect_hku_hk/EUzgB7BmI9VEqSyPH9eW7mwBdc7xj74CrvFIJdwfo2ZcmA?e=8WSbqd);  [log](https://connecthkuhk-my.sharepoint.com/:u:/g/personal/js20_connect_hku_hk/ETwew6qgVY1AgqwmsC-ZmFYB2eoQyJycVA9NpD2MXuQNIA?e=7YsiFS) |
