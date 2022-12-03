@@ -16,10 +16,7 @@ Thanks to MMPose, the repo produces slightly better results (compared to those r
 
 Codes will be integrated into MMPose soon.
 
-
-
-[![Demo](https://i.ytimg.com/vi/45c9_4neVp8/maxresdefault.jpg)](https://www.youtube.com/watch?v=45c9_4neVp8 "Demo")
-
+[![Demo](https://res.cloudinary.com/marcomontalbano/image/upload/v1670075066/video_to_markdown/images/youtube--45c9_4neVp8-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=45c9_4neVp8 "Demo")
 
 ## TODO
 - [x] Training/testing codes release.
