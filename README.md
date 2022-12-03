@@ -7,10 +7,24 @@
 
 ## Introduction
 
-This is the official release of our paper
-[**Graph-Based 3D Multi-Person Pose Estimation Using Multi-View Images**](
-https://openaccess.thecvf.com/content/ICCV2021/papers/Wu_Graph-Based_3D_Multi-Person_Pose_Estimation_Using_Multi-View_Images_ICCV_2021_paper.pdf) 
-based on [MMPose](https://github.com/open-mmlab/mmpose). Thanks to MMPose, the repo produces slightly better results (compared to those reported in the ICCV'21 paper), please see [Results](https://github.com/wusize/multiview_pose#results) below. Codes will be integrated into MMPose soon.
+This is the official release for:
+> [**Graph-Based 3D Multi-Person Pose Estimation Using Multi-View Images**](
+https://openaccess.thecvf.com/content/ICCV2021/papers/Wu_Graph-Based_3D_Multi-Person_Pose_Estimation_Using_Multi-View_Images_ICCV_2021_paper.pdf),           
+> Size Wu, Sheng Jin, Wentao Liu, Lei Bai, Chen Qian, Dong Liu, and Wanli Ouyang           
+> *ICCV 2021 ([arXiv 2109.05885](https://arxiv.org/abs/2109.05885))*
+
+Thanks to [MMPose](https://github.com/open-mmlab/mmpose), the repo produces slightly better results (compared to those reported in our ICCV'21 [paper](https://arxiv.org/abs/2109.05885)), please see [Results](https://github.com/wusize/multiview_pose#results) below. Codes will be integrated into MMPose soon.
+
+## Abstract
+
+This paper studies the task of estimating the 3D human
+poses of multiple persons from multiple calibrated camera
+views. Following the top-down paradigm, we decompose
+the task into two stages, i.e. person localization and pose estimation. Both stages are processed in coarse-to-fine manners. And we propose three task-specific graph neural networks for effective message passing. For 3D person localization, we first use Multi-view Matching Graph Module (MMG) to learn the cross-view association and recover
+coarse human proposals. The Center Refinement Graph
+Module (CRG) further refines the results via flexible pointbased prediction. For 3D pose estimation, the Pose Regression Graph Module (PRG) learns both the multi-view geometry and structural relations between human joints. Our
+approach achieves state-of-the-art performance on CMU
+Panoptic and Shelf datasets with significantly lower computation complexity.
 
 ![Intro](https://user-images.githubusercontent.com/11788150/205444212-333ccc6a-abd5-48d0-a9dc-83dda75501cc.PNG)
 
