@@ -16,6 +16,11 @@ Thanks to MMPose, the repo produces slightly better results (compared to those r
 
 Codes will be integrated into MMPose soon.
 
+
+
+[![Demo](https://i.ytimg.com/vi/45c9_4neVp8/maxresdefault.jpg)](https://www.youtube.com/watch?v=45c9_4neVp8 "Demo")
+
+
 ## TODO
 - [x] Training/testing codes release.
 - [x] Pre-trained model release.
