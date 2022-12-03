@@ -1,6 +1,6 @@
 # Graph-Based 3D Multi-Person Pose Estimation Using Multi-View Images (ICCV'2021)
 
-\[[📜 Paper](https://arxiv.org/abs/2204.08680](https://openaccess.thecvf.com/content/ICCV2021/papers/Wu_Graph-Based_3D_Multi-Person_Pose_Estimation_Using_Multi-View_Images_ICCV_2021_paper.pdf))\]
+\[[📜 Paper](https://openaccess.thecvf.com/content/ICCV2021/papers/Wu_Graph-Based_3D_Multi-Person_Pose_Estimation_Using_Multi-View_Images_ICCV_2021_paper.pdf))\]
 \[[📰 Blog (商汤学术)](https://arxiv.org/abs/2204.08680)\]
 
 ## Introduction
@@ -12,7 +12,7 @@ based on [MMPose](https://github.com/open-mmlab/mmpose). Codes will be integrate
 
 ## TODO
 - [x] Training/testing codes release.
-- [ ] Pre-trained model release.
+- [x] Pre-trained model release.
 - [ ] Integrate codes to [MMPose](https://github.com/open-mmlab/mmpose).
 
 ## Results
