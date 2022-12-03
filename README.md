@@ -10,11 +10,9 @@
 This is the official release of our paper
 [**Graph-Based 3D Multi-Person Pose Estimation Using Multi-View Images**](
 https://openaccess.thecvf.com/content/ICCV2021/papers/Wu_Graph-Based_3D_Multi-Person_Pose_Estimation_Using_Multi-View_Images_ICCV_2021_paper.pdf) 
-based on [MMPose](https://github.com/open-mmlab/mmpose). 
+based on [MMPose](https://github.com/open-mmlab/mmpose). Thanks to MMPose, the repo produces slightly better results (compared to those reported in the ICCV'21 paper), please see [Results](https://github.com/wusize/multiview_pose#results) below. Codes will be integrated into MMPose soon.
 
-Thanks to MMPose, the repo produces slightly better results (compared to those reported in the ICCV'21 paper).  
-
-Codes will be integrated into MMPose soon.
+![Intro](https://user-images.githubusercontent.com/11788150/205444212-333ccc6a-abd5-48d0-a9dc-83dda75501cc.PNG)
 
 [![Demo](https://res.cloudinary.com/marcomontalbano/image/upload/v1670075066/video_to_markdown/images/youtube--45c9_4neVp8-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=45c9_4neVp8 "Demo")
 
