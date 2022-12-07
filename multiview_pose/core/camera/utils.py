@@ -66,52 +66,6 @@ class StereoGeometry:
             self.camera_center_2, self.ray_direction_2)
 
 
-# class StereoGeometry:
-#     def __init__(self, x1, camera1, x2, camera2):
-#         self.x1 = x1
-#         self.x2 = x2
-#         self.camera1 = camera1
-#         self.camera2 = camera2
-#         x_camera_norm_1 = camera1.pixel_to_camera(x1, left_product=True)
-#         camera_center_1, ray_direction_1 = camera1.camera_to_ray(x_camera_norm_1, left_product=True)
-#         x_camera_norm_2 = camera2.pixel_to_camera(x2, left_product=True)
-#         camera_center_2, ray_direction_2 = camera2.camera_to_ray(x_camera_norm_2, left_product=True)
-#         self.camera_center_1 = camera_center_1
-#         self.camera_center_2 = camera_center_2
-#         self.ray_direction_1 = ray_direction_1
-#         self.ray_direction_2 = ray_direction_2
-#         self.x_camera_norm_1 = x_camera_norm_1
-#         self.x_camera_norm_2 = x_camera_norm_2
-#
-#         self._epipolar_distances()
-#
-#     def _epipolar_distances(self):
-#         # project x1 -> image2
-#         epipole_1to2 = self.camera2.param['R_c2w'] @ (
-#                 self.camera_center_1 - self.camera_center_2)
-#         epipole_1to2 = epipole_1to2[:2, :] / epipole_1to2[2, :]  # 2x1
-#         second_point_1to2 = self.camera2.param['R_c2w'] @ (
-#                 self.camera_center_1 + self.ray_direction_1 - self.camera_center_2)  # 3xN
-#         second_point_1to2 = second_point_1to2[:2, :] / second_point_1to2[2:, :]  # 2xN
-#         self.distance_1to2 = calculate_point2line_distance(
-#             self.x_camera_norm_2[:2], epipole_1to2, second_point_1to2)  # N
-#
-#         # project x2 -> image1
-#         epipole_2to1 = self.camera1.param['R_c2w'] @ (
-#                 self.camera_center_2 - self.camera_center_1)
-#         epipole_2to1 = epipole_2to1[:2, :] / epipole_2to1[2, :]
-#         second_point_2to1 = self.camera1.param['R_c2w'] @ (
-#                 self.camera_center_2 + self.ray_direction_2 - self.camera_center_1)
-#         second_point_2to1 = second_point_2to1[:2, :] / second_point_2to1[2:, :]
-#         self.distance_2to1 = calculate_point2line_distance(
-#             self.x_camera_norm_1[:2], epipole_2to1, second_point_2to1)  # N
-#
-#     def _reconstruct_candidates(self):
-#         self.reconstructions = reconstruct_from_two_points(
-#             self.camera_center_1, self.ray_direction_1,
-#             self.camera_center_2, self.ray_direction_2)
-#
-
 def calculate_stereo_geometry(x1, camera1, x2, camera2, reconstruct=False):
     """
     Args
