@@ -5,6 +5,8 @@
 \[[📹 Presentation](https://connecthkuhk-my.sharepoint.com/:v:/g/personal/js20_connect_hku_hk/EUOmA9eGBANNhyRD7W_39WAB0OvOpcLvaQg8EJjWpKxJwA?e=0rc5Nb)\]
 \[[📺 Demo (YouTube)](https://youtu.be/45c9_4neVp8)\]
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/graph-based-3d-multi-person-pose-estimation/3d-multi-person-pose-estimation-on-cmu)](https://paperswithcode.com/sota/3d-multi-person-pose-estimation-on-cmu?p=graph-based-3d-multi-person-pose-estimation)
+
 ## Introduction
 
 This is the official release for:
